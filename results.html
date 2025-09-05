@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제주강단학원 | 성과·후기</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold text-emerald-600">제주강단학원</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">홈</a>
+                        <a href="teachers.html" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">강사진</a>
+                        <a href="programs.html" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">프로그램</a>
+                        <a href="timetable.html" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">시간표</a>
+                        <a href="results.html" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">성과·후기</a>
+                        <a href="contact.html" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">오시는 길</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                     <a href="contact.html#apply" class="bg-emerald-500 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-emerald-600 transition duration-300">상담 예약</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="results" class="py-16 sm:py-20 lg:py-24">
+             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight">성과 및 후기</h2>
+                    <p class="mt-2 text-lg text-gray-600">숫자가 증명하는 제주강단의 실력, 선배들의 생생한 후기입니다.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4 text-center">과목별 평균 성적 상승폭 (2025년 1학기)</h3>
+                        <p class="text-gray-600 mb-4 text-center">제주강단 학생들은 지난 학기 중간고사 대비 기말고사에서 괄목할 만한 성적 향상을 이뤄냈습니다. 데이터는 끊임없는 노력의 결과를 보여줍니다.</p>
+                        <div class="chart-container relative h-80 w-full max-w-lg mx-auto">
+                            <canvas id="gradeImprovementChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <p class="text-gray-700 italic">"수학이 항상 발목을 잡았는데, 이수학 선생님의 꼼꼼한 오답 관리 덕분에 처음으로 1등급을 받았습니다. 정말 감사해요!"</p>
+                            <p class="text-right font-bold mt-2 text-emerald-600">- 오O고 2학년 김O현 (실명 공개 동의)</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <p class="text-gray-700 italic">"박국어 선생님의 내신 대비 특강은 정말 최고예요. 시험에 나올만한 지문만 쏙쏙 뽑아주셔서 시간도 절약하고 점수도 올랐어요."</p>
+                            <p class="text-right font-bold mt-2 text-emerald-600">- 제O중 3학년 이O서 (가명)</p>
+                        </div>
+                         <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <p class="text-gray-700 italic">"혼자서는 막막했던 영어 독해, 최영어 선생님과 함께 매일 꾸준히 구조 분석을 연습하니 수능 모의고사 지문이 쉽게 읽히기 시작했어요."</p>
+                            <p class="text-right font-bold mt-2 text-emerald-600">- 신O고 1학년 박O준 (이니셜 P.S.J)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <div>
+                    <h3 class="text-lg font-bold">제주강단학원</h3>
+                    <p class="text-sm text-gray-400 mt-1">주소: 제주특별자치도 제주시 연삼로 416</p>
+                    <p class="text-sm text-gray-400">2F: 064-900-5297 | 4F: 064-702-5297 | 5F: 064-702-6297</p>
+                </div>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white">카카오</a>
+                    <a href="#" class="text-gray-400 hover:text-white">인스타</a>
+                    <a href="#" class="text-gray-400 hover:text-white">블로그</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-sm text-gray-500">
+                &copy; 2025 Jeju Gangdan Academy. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const gradeImprovementChartCtx = document.getElementById('gradeImprovementChart').getContext('2d');
+            new Chart(gradeImprovementChartCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['국어', '영어', '수학'],
+                    datasets: [{
+                        label: '평균 등급 상승',
+                        data: [1.2, 1.5, 1.8],
+                        backgroundColor: ['#6EE7B7', '#34D399', '#10B981'],
+                        borderRadius: 5,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { beginAtZero: true, suggestedMax: 2, title: {display: true, text: '등급'} }
+                    },
+                    plugins: { legend: { display: false } }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
