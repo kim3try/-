@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제주강단학원 | 강사</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; }
+        .modal { display: none; }
+        .modal.active { display: flex; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold text-emerald-600">제주강단학원</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">홈</a>
+                        <a href="teachers.html" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">강사진</a>
+                        <a href="programs.html" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">프로그램</a>
+                        <a href="timetable.html" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">시간표</a>
+                        <a href="results.html" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">성과·후기</a>
+                        <a href="contact.html" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">오시는 길</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                     <a href="contact.html#apply" class="bg-emerald-500 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-emerald-600 transition duration-300">상담 예약</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="teachers" class="py-16 sm:py-20 lg:py-24 bg-gray-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight">최고의 강사진</h2>
+                    <p class="mt-2 text-lg text-gray-600">제주강단의 핵심은 최고의 강사진입니다. 과목, 학년, 담당 층으로 필터링하여 학생에게 꼭 맞는 선생님을 찾아보세요.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md mb-8 flex flex-wrap items-center justify-center gap-4">
+                    <div class="flex items-center space-x-2">
+                        <label for="subject-filter" class="font-medium">과목:</label>
+                        <select id="subject-filter" class="rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500">
+                            <option value="all">전체</option>
+                            <option value="국어">국어</option>
+                            <option value="수학">수학</option>
+                            <option value="영어">영어</option>
+                        </select>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <label for="grade-filter" class="font-medium">학년:</label>
+                        <select id="grade-filter" class="rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500">
+                            <option value="all">전체</option>
+                            <option value="중등">중등</option>
+                            <option value="고등">고등</option>
+                        </select>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <label for="floor-filter" class="font-medium">층:</label>
+                        <select id="floor-filter" class="rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500">
+                            <option value="all">전체</option>
+                            <option value="2F">2F GT관</option>
+                            <option value="4F">4F 국어·영어</option>
+                            <option value="5F">5F 고등 수학</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="teacher-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <div>
+                    <h3 class="text-lg font-bold">제주강단학원</h3>
+                    <p class="text-sm text-gray-400 mt-1">주소: 제주특별자치도 제주시 연삼로 416</p>
+                    <p class="text-sm text-gray-400">2F: 064-900-5297 | 4F: 064-702-5297 | 5F: 064-702-6297</p>
+                </div>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white">카카오</a>
+                    <a href="#" class="text-gray-400 hover:text-white">인스타</a>
+                    <a href="#" class="text-gray-400 hover:text-white">블로그</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-sm text-gray-500">
+                &copy; 2025 Jeju Gangdan Academy. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <div id="teacher-modal" class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] overflow-y-auto relative">
+            <button id="modal-close" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+            <div id="modal-content" class="p-8">
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const teacherData = [
+                { id: 1, name: '김수학', subject: '수학', grade: '중등', floor: '2F', short_desc: '개념부터 심화까지 완벽 마스터', photo: 'https://placehold.co/400x400/a7f3d0/166534?text=KSH', bio: '서울대 수학교육과 졸업. 대치동 강의 경력 10년. 내신 만점 다수 배출.', points: ['꼼꼼한 개념 설명', '유형별 문제풀이 전략', '개인별 오답노트 관리'], target: '수학의 기초를 탄탄히 다지고 싶은 학생', schedule: '월,수,금 17:00-21:00' },
+                { id: 2, name: '이수학', subject: '수학', grade: '고등', floor: '5F', short_desc: '수능 킬러문항 정복 전문가', photo: 'https://placehold.co/400x400/a7f3d0/166534?text=LSH', bio: '포항공대 수학과 석사. 수능 수학 만점자 배출. 평가원 출제 원리 분석.', points: ['킬러 문항 집중 분석', '시간 단축을 위한 풀이법', '실전 모의고사 훈련'], target: '수능 수학 1등급을 목표로 하는 학생', schedule: '화,목,토 18:00-22:00' },
+                { id: 3, name: '박국어', subject: '국어', grade: '중등', floor: '4F', short_desc: '내신 국어 만점을 위한 선택', photo: 'https://placehold.co/400x400/6ee7b7/14532d?text=PKR', bio: '고려대 국어국문학과 졸업. 중등 국어 내신 대비 8년. 자체 교재 보유.', points: ['교과서 핵심 완벽 정리', '서술형 평가 완벽 대비', '문학/비문학 독해력 향상'], target: '국어 내신 성적을 올리고 싶은 중학생', schedule: '월,수 19:00-21:00' },
+                { id: 4, name: '최영어', subject: '영어', grade: '고등', floor: '4F', short_desc: 'EBS 연계 적중률 100% 도전', photo: 'https://placehold.co/400x400/34d399/064e3b?text=CEY', bio: '연세대 영어영문학과 졸업. EBSi 강의 경력. 수능 영어 절대평가 1등급 전문.', points: ['EBS 수능특강/완성 완벽 분석', '구문 독해 능력 강화', '어법/어휘 암기 비법 전수'], target: '안정적인 수능 영어 1등급을 원하는 학생', schedule: '화,목 20:00-22:00' },
+                { id: 5, name: '정과학', subject: '수학', grade: '고등', floor: '5F', short_desc: '논리적 사고로 수학을 완성', photo: 'https://placehold.co/400x400/a7f3d0/166534?text=JS', bio: 'KAIST 수리과학부 졸업. 수학 올림피아드 수상 다수 지도.', points: ['증명과 추론 중심의 수업', '심화 문제 해결 능력 배양', '수리 논술 기초 확립'], target: '수학적 사고력을 기르고 싶은 상위권 학생', schedule: '토,일 14:00-18:00' },
+                 { id: 6, name: '윤국어', subject: '국어', grade: '고등', floor: '4F', short_desc: '수능 국어의 본질을 꿰뚫는 강의', photo: 'https://placehold.co/400x400/6ee7b7/14532d?text=YKR', bio: '서울대 국어교육과 졸업. 메가스터디 국어 대표 강사 출신.', points: ['고전 문학 완벽 해석', '비문학 독해 원리 체화', '화법과 작문 시간 단축 전략'], target: '국어 영역 고득점을 노리는 모든 고등학생', schedule: '금,일 18:00-22:00' }
+            ];
+
+            const teacherGrid = document.getElementById('teacher-grid');
+            const subjectFilter = document.getElementById('subject-filter');
+            const gradeFilter = document.getElementById('grade-filter');
+            const floorFilter = document.getElementById('floor-filter');
+
+            function renderTeachers(teachers) {
+                teacherGrid.innerHTML = '';
+                teachers.forEach(teacher => {
+                    const card = document.createElement('div');
+                    card.className = 'bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer';
+                    card.dataset.teacherId = teacher.id;
+                    card.innerHTML = `
+                        <img class="w-full h-56 object-cover" src="${teacher.photo}" alt="${teacher.name} 강사">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold">${teacher.name} <span class="text-sm font-medium text-emerald-600">${teacher.subject}</span></h3>
+                            <p class="text-gray-600 text-sm">${teacher.grade} / ${teacher.floor}</p>
+                            <p class="mt-2 text-gray-700">"${teacher.short_desc}"</p>
+                            <button data-teacher-id="${teacher.id}" class="mt-4 w-full bg-emerald-100 text-emerald-800 px-4 py-2 rounded-md text-sm font-bold hover:bg-emerald-200 transition">상세 보기</button>
+                        </div>
+                    `;
+                    teacherGrid.appendChild(card);
+                });
+            }
+
+            function filterTeachers() {
+                const subject = subjectFilter.value;
+                const grade = gradeFilter.value;
+                const floor = floorFilter.value;
+
+                const filteredTeachers = teacherData.filter(teacher => {
+                    return (subject === 'all' || teacher.subject === subject) &&
+                           (grade === 'all' || teacher.grade === grade) &&
+                           (floor === 'all' || teacher.floor === floor);
+                });
+                renderTeachers(filteredTeachers);
+            }
+
+            [subjectFilter, gradeFilter, floorFilter].forEach(filter => {
+                filter.addEventListener('change', filterTeachers);
+            });
+
+            renderTeachers(teacherData);
+
+            const modal = document.getElementById('teacher-modal');
+            const modalContent = document.getElementById('modal-content');
+            const modalClose = document.getElementById('modal-close');
+            
+            teacherGrid.addEventListener('click', (e) => {
+                const targetButton = e.target.closest('button[data-teacher-id]') || e.target.closest('div[data-teacher-id]');
+                if (targetButton) {
+                    const teacherId = targetButton.dataset.teacherId;
+                    const teacher = teacherData.find(t => t.id == teacherId);
+                    if (teacher) {
+                        modalContent.innerHTML = `
+                             <div class="flex flex-col sm:flex-row gap-8">
+                                <div class="sm:w-1/3 text-center">
+                                    <img src="${teacher.photo}" alt="${teacher.name}" class="w-40 h-40 rounded-full mx-auto object-cover mb-4 shadow-lg">
+                                    <h2 class="text-3xl font-bold">${teacher.name}</h2>
+                                    <p class="text-emerald-600 font-semibold">${teacher.subject} / ${teacher.grade}</p>
+                                </div>
+                                <div class="sm:w-2/3">
+                                    <p class="text-lg text-gray-700 italic mb-4">"${teacher.short_desc}"</p>
+                                    <p class="text-gray-600 mb-4">${teacher.bio}</p>
+                                    <div class="border-t pt-4">
+                                        <h3 class="font-bold text-lg mb-2">수업 포인트</h3>
+                                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                            ${teacher.points.map(p => `<li>${p}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                     <div class="border-t pt-4 mt-4">
+                                        <h3 class="font-bold text-lg mb-2">추천 대상</h3>
+                                        <p class="text-gray-600">${teacher.target}</p>
+                                    </div>
+                                    <div class="border-t pt-4 mt-4">
+                                        <h3 class="font-bold text-lg mb-2">수업 시간</h3>
+                                        <p class="text-gray-600">${teacher.schedule}</p>
+                                    </div>
+                                    <a href="contact.html#apply" class="mt-6 inline-block w-full text-center bg-emerald-500 text-white px-6 py-3 rounded-full font-bold hover:bg-emerald-600 transition">
+                                        ${teacher.name} 강사님과 상담 예약
+                                    </a>
+                                </div>
+                            </div>
+                        `;
+                        modal.classList.add('active');
+                    }
+                }
+            });
+
+            modalClose.addEventListener('click', () => modal.classList.remove('active'));
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) modal.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
