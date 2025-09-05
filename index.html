@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제주강단학원 | 홈</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold text-emerald-600">제주강단학원</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">홈</a>
+                        <a href="teachers.html" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">강사진</a>
+                        <a href="programs.html" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">프로그램</a>
+                        <a href="timetable.html" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">시간표</a>
+                        <a href="results.html" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">성과·후기</a>
+                        <a href="contact.html" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">오시는 길</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                     <a href="contact.html#apply" class="bg-emerald-500 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-emerald-600 transition duration-300">상담 예약</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="bg-emerald-50 py-20 sm:py-24 lg:py-32">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight">
+                    강사·시간표·상담을 한곳에서.
+                </h1>
+                <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                    제주강단 입학·상담 포털에서 학생에게 꼭 맞는 최고의 교육을 만나보세요.
+                </p>
+                <div class="mt-8 flex justify-center gap-4">
+                    <a href="contact.html#apply" class="bg-emerald-500 text-white px-8 py-3 rounded-full text-lg font-bold hover:bg-emerald-600 transition duration-300 transform hover:scale-105">
+                        상담 예약하기
+                    </a>
+                    <a href="timetable.html" class="bg-white text-emerald-600 border border-emerald-500 px-8 py-3 rounded-full text-lg font-bold hover:bg-emerald-50 transition duration-300">
+                        시간표 보기
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="strengths" class="py-16 sm:py-20 lg:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight">제주강단만의 핵심 강점</h2>
+                    <p class="mt-2 text-lg text-gray-600">체계적인 관리로 최상의 결과를 만듭니다.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="text-5xl mb-4 text-emerald-500">🏢</div>
+                        <h3 class="text-xl font-bold mb-2">층별 전담 시스템</h3>
+                        <p class="text-gray-600">각 층별로 전문화된 강사진과 관리 시스템으로 학습 효율을 극대화합니다.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                         <div class="text-5xl mb-4 text-emerald-500">🗓️</div>
+                        <h3 class="text-xl font-bold mb-2">최신 시간표 제공</h3>
+                        <p class="text-gray-600">가장 정확한 최신 시간표를 웹사이트에서 바로 확인하고 다운로드할 수 있습니다.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                         <div class="text-5xl mb-4 text-emerald-500">💬</div>
+                        <h3 class="text-xl font-bold mb-2">빠르고 쉬운 상담</h3>
+                        <p class="text-gray-600">온라인으로 간편하게 상담을 예약하고, 전문 컨설턴트와 연결될 수 있습니다.</p>
+                    </div>
+                </div>
+                <div class="mt-16 bg-white p-8 rounded-xl shadow-lg flex flex-col md:flex-row items-center gap-8">
+                    <div class="w-full md:w-1/2">
+                        <h3 class="text-2xl font-bold mb-2">대표 목표 지표: 상담 → 등록 전환율</h3>
+                        <p class="text-gray-600">저희는 모든 상담이 실질적인 등록으로 이어질 수 있도록 최고의 상담 품질을 유지하는 것을 목표로 합니다. 투명한 정보 제공과 맞춤형 컨설팅을 통해 25%의 전환율을 달성하고자 합니다.</p>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="chart-container relative h-64 md:h-80 w-full max-w-sm mx-auto">
+                            <canvas id="conversionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="teachers-highlight" class="py-16 sm:py-20 lg:py-24 bg-gray-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight">대표 강사진</h2>
+                    <p class="mt-2 text-lg text-gray-600">학생들의 성적 향상을 이끌어온 제주강단의 대표 강사들을 만나보세요.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                         <img class="w-full h-56 object-cover" src="https://placehold.co/400x400/a7f3d0/166534?text=KSH" alt="김수학 강사">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold">김수학 <span class="text-sm font-medium text-emerald-600">수학</span></h3>
+                            <p class="mt-2 text-gray-700">개념부터 심화까지 완벽 마스터</p>
+                            <a href="teachers.html" class="mt-4 inline-block bg-emerald-100 text-emerald-800 px-4 py-2 rounded-md text-sm font-bold hover:bg-emerald-200 transition">자세히 보기</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img class="w-full h-56 object-cover" src="https://placehold.co/400x400/34d399/064e3b?text=CEY" alt="최영어 강사">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold">최영어 <span class="text-sm font-medium text-emerald-600">영어</span></h3>
+                            <p class="mt-2 text-gray-700">EBS 연계 적중률 100% 도전</p>
+                            <a href="teachers.html" class="mt-4 inline-block bg-emerald-100 text-emerald-800 px-4 py-2 rounded-md text-sm font-bold hover:bg-emerald-200 transition">자세히 보기</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img class="w-full h-56 object-cover" src="https://placehold.co/400x400/6ee7b7/14532d?text=PKR" alt="박국어 강사">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold">박국어 <span class="text-sm font-medium text-emerald-600">국어</span></h3>
+                            <p class="mt-2 text-gray-700">내신 국어 만점을 위한 선택</p>
+                            <a href="teachers.html" class="mt-4 inline-block bg-emerald-100 text-emerald-800 px-4 py-2 rounded-md text-sm font-bold hover:bg-emerald-200 transition">자세히 보기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <a href="teachers.html" class="inline-block bg-emerald-500 text-white px-6 py-3 rounded-full font-bold hover:bg-emerald-600 transition">전체 강사진 보기</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 sm:py-20 lg:py-24">
+             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                 <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight">오시는 길</h2>
+                    <p class="mt-2 text-lg text-gray-600">여러분의 방문을 기다립니다.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white p-8 rounded-lg shadow-lg">
+                    <div>
+                        <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.711802345037!2d126.5303283152011!3d33.4822739807722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350cfb1428a07f75%3A0x635f5c8a9a6b3e0!2z7JWI7KO87YOA66W46riw7YWQ66GdIDQxNg!5e0!3m2!1sko!2skr!4v1662345678901!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <h3 class="text-xl font-bold mb-4">제주강단학원</h3>
+                        <p class="mb-2">📍 주소: 제주특별자치도 제주시 연삼로 416</p>
+                        <p class="mb-4">🚗 주차: 건물 뒤편 주차장 이용 가능</p>
+                        <div class="space-y-2 border-t pt-4">
+                             <p class="font-semibold">📞 층별 담당 연락처</p>
+                             <p><b>2F GT관 (초중 수학):</b> 064-900-5297</p>
+                             <p><b>4F 국어·영어:</b> 064-702-5297</p>
+                             <p><b>5F 고등 수학:</b> 064-702-6297</p>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <div>
+                    <h3 class="text-lg font-bold">제주강단학원</h3>
+                    <p class="text-sm text-gray-400 mt-1">주소: 제주특별자치도 제주시 연삼로 416</p>
+                    <p class="text-sm text-gray-400">2F: 064-900-5297 | 4F: 064-702-5297 | 5F: 064-702-6297</p>
+                </div>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white">카카오</a>
+                    <a href="#" class="text-gray-400 hover:text-white">인스타</a>
+                    <a href="#" class="text-gray-400 hover:text-white">블로그</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-sm text-gray-500">
+                &copy; 2025 Jeju Gangdan Academy. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const conversionChartCtx = document.getElementById('conversionChart').getContext('2d');
+            new Chart(conversionChartCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['등록 전환', '상담 유지'],
+                    datasets: [{
+                        data: [25, 75],
+                        backgroundColor: ['#10B981', '#E5E7EB'],
+                        borderColor: ['#ffffff', '#ffffff'],
+                        borderWidth: 4,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    plugins: {
+                        legend: { display: true, position: 'bottom' },
+                        tooltip: { enabled: true },
+                        title: { display: true, text: '상담 → 등록 전환 목표: 25%', font: {size: 16}}
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
